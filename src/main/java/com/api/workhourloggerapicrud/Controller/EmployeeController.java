@@ -44,7 +44,7 @@ public class EmployeeController {
         Optional<EmployeeModel> EmployeeModelOptional = employeeService.findEmployeeById(id);
         if (EmployeeModelOptional.isEmpty())
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No Employee Found");
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(employeeService.getEmployees());
+        return ResponseEntity.status(HttpStatus.Ok).body(employeeService.getEmployees());
 
     }
 
